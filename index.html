@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +6,7 @@
   <meta name="ppck-ver" content="84de141e5cf0eb5cad1ab632f0dddc2e" />
   <title>Movies Aro - Tamil</title>
   <link rel="icon" type="image/svg+xml" href="/logo.svg">
- <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&amp;display=swap" rel="stylesheet" />
-
-
-
-
-  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&amp;display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #0e1015;
@@ -34,7 +26,7 @@
       max-width: 840px;
       margin: 0 auto;
     }
-h1 {
+    h1 {
       text-align: center;
       padding: 30px 10px;
       font-size: 2.5rem;
@@ -43,8 +35,7 @@ h1 {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
- footer {
+    footer {
       text-align: center;
       padding: 30px 20px;
       font-size: 0.9rem;
@@ -134,164 +125,143 @@ h1 {
       font-family: monospace;
       color: var(--text);
     }
-.telegram-icon-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px 0;
-}
-
-.telegram-icon {
-  background: linear-gradient(to right, #4a90e2, #8e44ad);
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 12px rgba(138, 43, 226, 0.5);
-  animation: pulse 2s infinite ease-in-out;
-  transition: transform 0.3s ease;
-  text-decoration: none;
-}
-
-.telegram-icon:hover {
-  transform: scale(1.1);
-}
-
-.telegram-icon svg {
-  width: 28px;
-  height: 28px;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 30px rgba(138, 43, 226, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 80px rgba(138, 43, 226, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
-  }
-}
-
+    .telegram-icon-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0;
+    }
+    .telegram-icon {
+      background: linear-gradient(to right, #4a90e2, #8e44ad);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 12px rgba(138, 43, 226, 0.5);
+      animation: pulse 2s infinite ease-in-out;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+    }
+    .telegram-icon:hover {
+      transform: scale(1.1);
+    }
+    .telegram-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 30px rgba(138, 43, 226, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 80px rgba(138, 43, 226, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+      }
+    }
   </style>
-<style>
- 
- 
+
+  <style>
     .spinner-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
     }
-
     .spinner {
-        border: 4px solid rgba(255,255,255,0.2);
-        border-top: 4px solid #ff9800;
-        border-radius: 50%;
-        width: 36px;
-        height: 36px;
-        animation: spin 0.8s linear infinite;
+      border: 4px solid rgba(255,255,255,0.2);
+      border-top: 4px solid #ff9800;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      animation: spin 0.8s linear infinite;
     }
-
     @keyframes spin {
-        100% { transform: rotate(360deg); }
+      100% { transform: rotate(360deg); }
     }
-
     #links {
-     
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        max-width: 800px;
-        width: 100%;
-        gap: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 800px;
+      width: 100%;
+      gap: 10px;
     }
-
     .link-container {
-        background:linear-gradient(to right, var(--accent), var(--accent2));
-        padding: 14px 18px;
-        border-radius: 8px;
-        transition: background 0.3s, transform 0.2s;
+      background:linear-gradient(to right, var(--accent), var(--accent2));
+      padding: 14px 18px;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
     }
-
     .link-container:hover {
-        background: #272727;
-        transform: translateY(-2px);
+      background: #272727;
+      transform: translateY(-2px);
     }
-
     .link-name {
-        color: white;
-        text-decoration: none;
-        font-size: 1.1em;
-        font-weight: 500;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: 500;
     }
-
     .link-name:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
-
-       /* === Pages Section Styles === */
     #number-section {
-        margin-top: 20px;
-        max-width: 800px;
-        width: 100%;
+      margin-top: 20px;
+      max-width: 800px;
+      width: 100%;
     }
-
     .section-title {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: #ff9800;
-        margin-bottom: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #ff9800;
+      margin-bottom: 10px;
     }
-
     .number-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        padding: 10px;
-        background: #1b1b1b;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px;
+      background: #1b1b1b;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
-
     .number-links .link-container {
-        background: #292929;
-        padding: 8px 14px;
-        border-radius: 6px;
-        text-align: center;
-        min-width: 50px;
-        transition: background 0.3s, transform 0.2s;
+      background: #292929;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-align: center;
+      min-width: 50px;
+      transition: background 0.3s, transform 0.2s;
     }
-
     .number-links .link-container:hover {
-        background: #ff9800;
-        transform: scale(1.05);
+      background: #ff9800;
+      transform: scale(1.05);
     }
-
     .number-links .link-name {
-        color: #fff;
-        font-weight: bold;
-        font-size: 0.95em;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.95em;
     }
     #backBtn {
-        background: #ff9800;
-        color: #121212;
-        border: none;
-        padding: 10px 16px;
-        border-radius: 6px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background 0.3s;
+      background: #ff9800;
+      color: #121212;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
     }
-
     #backBtn:hover {
-        background: #ffa733;
+      background: #ffa733;
     }
-</style>
- <script>
+  </style>
+
+  <script>
     window.onload = function () {
       var target = "https://moviesarodb.netlify.app";
       var ua = navigator.userAgent || "";
@@ -305,104 +275,321 @@ h1 {
       }
     };
   </script>
-
+</head>
+<body>
   <div class="wrap">
     <h1>🎬 Movies Aro</h1>
-   
-
-   
     <div id="output" aria-live="polite"></div>
-   
   </div>
-<div class="button-box">
- 
-  <button onclick="window.open('https://moviesarodb.netlify.app', '_self')">
-    Go to Movies Aro (New)
-  </button>
-  <button onclick="window.open('https://moviesarodub.netlify.app', '_self')">
-    All Tamil Dubbed Movies
-  </button>
-</div>
-<style>
-  .button-box {
-  text-align: center;
-  margin: 20px auto;
-}
 
-.button-box button {
-  display: inline-block;
-  margin: 12px 0;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, #0b63ff, #3a9dff);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
-}
+  <div class="button-box">
+    <button onclick="window.open('https://moviesarodb.netlify.app', '_self')">
+      Go to Movies Aro (New)
+    </button>
+    <button onclick="window.open('https://moviesarodub.netlify.app', '_self')">
+      All Tamil Dubbed Movies
+    </button>
+  </div>
 
-.button-box button:hover {
-  background: linear-gradient(135deg, #0954d6, #338ae6);
-  transform: translateY(-2px);
-}
+  <style>
+    .button-box {
+      text-align: center;
+      margin: 20px auto;
+    }
+    .button-box button {
+      display: inline-block;
+      margin: 12px 0;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #0b63ff, #3a9dff);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .button-box button:hover {
+      background: linear-gradient(135deg, #0954d6, #338ae6);
+      transform: translateY(-2px);
+    }
+    .button-box button:active {
+      transform: scale(0.97);
+    }
+  </style>
 
-.button-box button:active {
-  transform: scale(0.97);
-}
+  <br/><br/><br/>
 
-</style>
- 
-  <br/>
-<br/>
-<br/>
-<div class="telegram-icon-center">
-  <a href="https://telegram.me/+V8nUElyN93U1ZTBl" target="_blank" class="telegram-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewbox="0 0 24 24">
-      <path d="M9.743 16.39L9.5 20.5c.572 0 .822-.246 1.12-.54l2.688-2.56 5.576 4.082c1.022.566 1.748.268 2.02-.95L24 4.82c.374-1.53-.545-2.127-1.556-1.76L1.204 10.47C-.24 11.03-.22 11.834.9 12.17l5.74 1.793 13.336-8.418c.63-.407 1.205-.182.734.26"/>
-    </path></svg>
-  </a>
-</div>
-<br/>
-<br/>
-<br/>
-  <br/>
-<div id="output" aria-live="polite"></div> <div> <div id="links"> <div class="spinner-container"> <div class="spinner"></div> </div> </div> <div id="number-section"></div> <br/> <button id="backBtn" style="display:none; margin-bottom: 20px;">Back</button> </div> <script> const excludedTexts = [ "Tamil Single Parts Movies","Tamil HD Mobile Movies","Tamil Dubbed Movies (Hollywood)", "Tamil A to Z Movies","Latest Tamil Web Series","Tamil Dubbed Movies", "Tamil Daily Movies","Moviesda Dubbed Movies","isaiDub Dubbed Movies", "isaimini 2025 Movies","Request a Movie","Moviesda Home","Disclaimer", "DMCA","Contact Us","About Us","Download Now", "0-9","Facebook Fan Page","Watch Online Server 1","Watch Online Server 2","Home", "SMS","Facebook","Twitter","Whatsapp","Telegram Channel","Latest Movies Updates","Tamil Movies Collection" ]; const mainContainer = document.getElementById('links'); const numberSection = document.getElementById('number-section'); const backBtn = document.getElementById('backBtn'); const proxyUrl = 'https://api.codetabs.com/v1/proxy/?quest='; // ✅ More stable than allorigins 
-  const historyStack = []; async function loadLinksFromUrl(url, isFinalPage = false) { mainContainer.innerHTML = <div class="spinner-container"><div class="spinner"></div></div>; numberSection.innerHTML = ''; if (!isFinalPage) historyStack.push(url); try { const response = await fetch(proxyUrl + encodeURIComponent(url)); if (!response.ok) throw new Error("Network Error"); const html = await response.text(); const doc = new DOMParser().parseFromString(html, 'text/html'); doc.querySelectorAll('.incoming-search-terms').forEach(el => el.remove()); const links = doc.querySelectorAll('a'); 
-                                                                                                                                                                                                                                                                // Find first valid <ul> 
-                                                                                                                                                                                                                                                                let validUl = null; for (const ul of doc.querySelectorAll('ul')) { if (!ul.closest('.incoming-search-terms')) { validUl = ul; break; } } mainContainer.innerHTML = ''; const numberContainer = document.createElement('div'); numberContainer.className = 'number-links'; // Render first valid <ul>
-                                                                                                                                                                                                                                                                if (validUl) { const div = document.createElement('div'); div.className = 'link-container'; div.appendChild(validUl.cloneNode(true)); mainContainer.appendChild(div); } // Render links
-                                                                                                                                                                                                                                                                links.forEach(link => { let text = link.textContent.trim(); let href = link.getAttribute('href'); if (!text || !href || excludedTexts.includes(text)) return; if (text.length === 1 && /[a-zA-Z]/.test(text)) return; if (/moviesda(\.mobi)?/i.test(text)) { text = 'Movies Aro - ' + text.replace(/moviesda(\.mobi)?/ig, '').trim(); } if (href.startsWith('/')) href = 'https://1moviesda.io' + href; else if (!href.startsWith('http')) href = 'https://1moviesda.io/' + href; const match5Digit = href.match(/(\d{5})/); if (!isFinalPage && match5Digit) { loadLinksFromUrl('https://download.moviespage.site/download/page/' + match5Digit[1], true); return; } const isDigit = /^\d{1,2}$/.test(text); if (isDigit) text += ' Page' const div = document.createElement('div'); div.className = 'link-container'; const nameLink = document.createElement('a'); nameLink.textContent = text; nameLink.className = 'link-name'; if (isFinalPage) { nameLink.href = href; nameLink.target = '_self'; nameLink.addEventListener('click', e => { e.preventDefault(); const originalUrl = href; // Choice popup 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  const choicePopup = document.createElement('div'); Object.assign(choicePopup.style, { position: 'fixed', top: '0', left: '0', width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: '9999' }); choicePopup.innerHTML = <div style="background:#fff; padding:20px; border-radius:8px; text-align:center; max-width:300px; color:black;"> <p>Choose an option:</p> <button id="playOnlineBtn" style="padding:8px 16px; margin:5px;">Play Online</button> <button id="downloadBtn" style="padding:8px 16px; margin:5px;">Download</button> </div> ; document.body.appendChild(choicePopup); function showOkPopup(action) { document.body.removeChild(choicePopup); const okPopup = document.createElement('div'); Object.assign(okPopup.style, { position: 'fixed', top: '0', left: '0', width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: '9999' }); okPopup.innerHTML = <div style="background:#fff; padding:20px; border-radius:8px; text-align:center; max-width:300px; color:black;"> <p>இப்போது நீங்கள் புதிய தளத்திற்கு செல்லப்படுவீர்கள்… அங்கு 5 விநாடிகள் காத்திருக்கவும். பின்னர் இங்கு வரவும்.</p> <button id="okBtn" style="padding:8px 16px; margin-top:10px;">OK</button> </div> ; document.body.appendChild(okPopup); okPopup.querySelector('#okBtn').addEventListener('click', () => { document.body.removeChild(okPopup); window.open('https://otieu.com/4/9535254', '_blank'); setTimeout(() => { if (action === 'download') { window.location.href = originalUrl; } else if (action === 'play') { // Play popup 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    const videoPopup = document.createElement('div'); Object.assign(videoPopup.style, { position: 'fixed', top: '50%', left: '50%', width:'80%', background: '#fff', padding: '10px', transform: 'translate(-50%, -50%)', zIndex: '9999', maxWidth: '90vw', maxHeight: '90vh', overflow: 'auto', }); const closeBtn = document.createElement('button'); closeBtn.textContent = 'Close'; closeBtn.style.display = 'block'; closeBtn.style.marginBottom = '10px'; const loader = document.createElement('div'); loader.textContent = 'Loading video... Make Internet Connection Better'; loader.style.textAlign = 'center'; loader.style.color = 'black'; loader.style.marginBottom = '10px'; const video = document.createElement('video'); video.setAttribute('playsinline', ''); video.setAttribute('preload', 'auto'); video.setAttribute('autoplay', ''); video.setAttribute('muted', ''); video.setAttribute('controls', ''); video.setAttribute('controlsList', 'nodownload'); video.style.maxWidth = '100%'; video.style.maxHeight = '80vh'; video.addEventListener('contextmenu', e => e.preventDefault()); const source = document.createElement('source'); source.src = originalUrl; source.type = 'video/mp4'; video.appendChild(source); video.addEventListener('canplay', () => loader.remove()); videoPopup.appendChild(closeBtn); videoPopup.appendChild(loader); videoPopup.appendChild(video); document.body.appendChild(videoPopup); closeBtn.addEventListener('click', () => { document.body.removeChild(videoPopup); }); } }, 6000); }); } choicePopup.querySelector('#playOnlineBtn').addEventListener('click', () => { showOkPopup('play'); }); choicePopup.querySelector('#downloadBtn').addEventListener('click', () => { showOkPopup('download'); }); }); } else { nameLink.href = '#'; nameLink.addEventListener('click', e => { e.preventDefault(); loadLinksFromUrl(href); }); } div.appendChild(nameLink); if (isDigit) numberContainer.appendChild(div); else mainContainer.appendChild(div); }); if (numberContainer.children.length > 0) { const title = document.createElement('div'); title.className = 'section-title'; title.textContent = 'Pages:'; numberSection.appendChild(title); numberSection.appendChild(numberContainer); } backBtn.style.display = historyStack.length > 1 ? 'inline-block' : 'none'; if (!mainContainer.innerHTML && !numberSection.innerHTML) { mainContainer.textContent = 'No valid content'; } } catch (err) { console.error(err); mainContainer.textContent = 'No valid content'; } } // Back button 
-  backBtn.addEventListener('click', () => { historyStack.pop(); const prev = historyStack.pop(); if (prev) loadLinksFromUrl(prev); }); // Start loadLinksFromUrl('https://1moviesda.io/'); 
-</script>
+  <div class="telegram-icon-center">
+    <a href="https://telegram.me/+V8nUElyN93U1ZTBl" target="_blank" class="telegram-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
+        <path d="M9.743 16.39L9.5 20.5c.572 0 .822-.246 1.12-.54l2.688-2.56 5.576 4.082c1.022.566 1.748.268 2.02-.95L24 4.82c.374-1.53-.545-2.127-1.556-1.76L1.204 10.47C-.24 11.03-.22 11.834.9 12.17l5.74 1.793 13.336-8.418c.63-.407 1.205-.182.734.26"/>
+      </svg>
+    </a>
+  </div>
 
+  <br/><br/><br/><br/>
+
+  <div id="output" aria-live="polite"></div>
+  <div>
+    <div id="links">
+      <div class="spinner-container"><div class="spinner"></div></div>
+    </div>
+    <div id="number-section"></div>
+    <br/>
+    <button id="backBtn" style="display:none; margin-bottom: 20px;">Back</button>
+  </div>
+
+  <script>
+    const excludedTexts = [
+      "Tamil Single Parts Movies","Tamil HD Mobile Movies","Tamil Dubbed Movies (Hollywood)",
+      "Tamil A to Z Movies","Latest Tamil Web Series","Tamil Dubbed Movies",
+      "Tamil Daily Movies","Moviesda Dubbed Movies","isaiDub Dubbed Movies",
+      "isaimini 2025 Movies","Request a Movie","Moviesda Home","Disclaimer",
+      "DMCA","Contact Us","About Us","Download Now","0-9","Facebook Fan Page",
+      "Watch Online Server 1","Watch Online Server 2","Home","SMS","Facebook",
+      "Twitter","Whatsapp","Telegram Channel","Latest Movies Updates","Tamil Movies Collection"
+    ];
+
+    const mainContainer = document.getElementById('links');
+    const numberSection = document.getElementById('number-section');
+    const backBtn = document.getElementById('backBtn');
+    const proxyUrl = 'https://api.codetabs.com/v1/proxy/?quest=';
+    const historyStack = [];
+
+    async function loadLinksFromUrl(url, isFinalPage = false) {
+      mainContainer.innerHTML = '<div class="spinner-container"><div class="spinner"></div></div>';
+      numberSection.innerHTML = '';
+
+      if (!isFinalPage) historyStack.push(url);
+
+      try {
+        const response = await fetch(proxyUrl + encodeURIComponent(url));
+        if (!response.ok) throw new Error("Network Error");
+
+        const html = await response.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        doc.querySelectorAll('.incoming-search-terms').forEach(el => el.remove());
+
+        const links = doc.querySelectorAll('a');
+        let validUl = null;
+
+        for (const ul of doc.querySelectorAll('ul')) {
+          if (!ul.closest('.incoming-search-terms')) {
+            validUl = ul;
+            break;
+          }
+        }
+
+        mainContainer.innerHTML = '';
+        const numberContainer = document.createElement('div');
+        numberContainer.className = 'number-links';
+
+        if (validUl) {
+          const div = document.createElement('div');
+          div.className = 'link-container';
+          div.appendChild(validUl.cloneNode(true));
+          mainContainer.appendChild(div);
+        }
+
+        links.forEach(link => {
+          let text = link.textContent.trim();
+          let href = link.getAttribute('href');
+          if (!text || !href || excludedTexts.includes(text)) return;
+          if (text.length === 1 && /[a-zA-Z]/.test(text)) return;
+
+          if (/moviesda(\.mobi)?/i.test(text)) {
+            text = 'Movies Aro - ' + text.replace(/moviesda(\.mobi)?/ig, '').trim();
+          }
+
+          if (href.startsWith('/')) href = 'https://1moviesda.io' + href;
+          else if (!href.startsWith('http')) href = 'https://1moviesda.io/' + href;
+
+          const match5Digit = href.match(/(\d{5})/);
+          if (!isFinalPage && match5Digit) {
+            loadLinksFromUrl('https://download.moviespage.site/download/page/' + match5Digit[1], true);
+            return;
+          }
+
+          const isDigit = /^\d{1,2}$/.test(text);
+          if (isDigit) text += ' Page';
+
+          const div = document.createElement('div');
+          div.className = 'link-container';
+          const nameLink = document.createElement('a');
+          nameLink.textContent = text;
+          nameLink.className = 'link-name';
+
+          if (isFinalPage) {
+            nameLink.href = href;
+            nameLink.target = '_self';
+            nameLink.addEventListener('click', e => {
+              e.preventDefault();
+              const originalUrl = href;
+
+              const choicePopup = document.createElement('div');
+              Object.assign(choicePopup.style, {
+                position: 'fixed', top: '0', left: '0',
+                width: '100%', height: '100%',
+                backgroundColor: 'rgba(0,0,0,0.6)',
+                display: 'flex', alignItems: 'center',
+                justifyContent: 'center', zIndex: '9999'
+              });
+              choicePopup.innerHTML = `
+                <div style="background:#fff; padding:20px; border-radius:8px; text-align:center; max-width:300px; color:black;">
+                  <p>Choose an option:</p>
+                  <button id="playOnlineBtn" style="padding:8px 16px; margin:5px;">Play Online</button>
+                  <button id="downloadBtn" style="padding:8px 16px; margin:5px;">Download</button>
+                </div>`;
+              document.body.appendChild(choicePopup);
+
+              function showOkPopup(action) {
+                document.body.removeChild(choicePopup);
+                const okPopup = document.createElement('div');
+                Object.assign(okPopup.style, {
+                  position: 'fixed', top: '0', left: '0',
+                  width: '100%', height: '100%',
+                  backgroundColor: 'rgba(0,0,0,0.6)',
+                  display: 'flex', alignItems: 'center',
+                  justifyContent: 'center', zIndex: '9999'
+                });
+                okPopup.innerHTML = `
+                  <div style="background:#fff; padding:20px; border-radius:8px; text-align:center; max-width:300px; color:black;">
+                    <p>இப்போது நீங்கள் புதிய தளத்திற்கு செல்லப்படுவீர்கள்… அங்கு 5 விநாடிகள் காத்திருக்கவும். பின்னர் இங்கு வரவும்.</p>
+                    <button id="okBtn" style="padding:8px 16px; margin-top:10px;">OK</button>
+                  </div>`;
+                document.body.appendChild(okPopup);
+
+                okPopup.querySelector('#okBtn').addEventListener('click', () => {
+                  document.body.removeChild(okPopup);
+                  window.open('https://otieu.com/4/9535254', '_blank');
+                  setTimeout(() => {
+                    if (action === 'download') {
+                      window.location.href = originalUrl;
+                    } else if (action === 'play') {
+                      const videoPopup = document.createElement('div');
+                      Object.assign(videoPopup.style, {
+                        position: 'fixed', top: '50%', left: '50%',
+                        width:'80%', background: '#fff', padding: '10px',
+                        transform: 'translate(-50%, -50%)', zIndex: '9999',
+                        maxWidth: '90vw', maxHeight: '90vh', overflow: 'auto'
+                      });
+
+                      const closeBtn = document.createElement('button');
+                      closeBtn.textContent = 'Close';
+                      closeBtn.style.display = 'block';
+                      closeBtn.style.marginBottom = '10px';
+
+                      const loader = document.createElement('div');
+                      loader.textContent = 'Loading video... Make Internet Connection Better';
+                      loader.style.textAlign = 'center';
+                      loader.style.color = 'black';
+                      loader.style.marginBottom = '10px';
+
+                      const video = document.createElement('video');
+                      video.setAttribute('playsinline', '');
+                      video.setAttribute('preload', 'auto');
+                      video.setAttribute('autoplay', '');
+                      video.setAttribute('muted', '');
+                      video.setAttribute('controls', '');
+                      video.setAttribute('controlsList', 'nodownload');
+                      video.style.maxWidth = '100%';
+                      video.style.maxHeight = '80vh';
+                      video.addEventListener('contextmenu', e => e.preventDefault());
+
+                      const source = document.createElement('source');
+                      source.src = originalUrl;
+                      source.type = 'video/mp4';
+                      video.appendChild(source);
+
+                      video.addEventListener('canplay', () => loader.remove());
+
+                      videoPopup.appendChild(closeBtn);
+                      videoPopup.appendChild(loader);
+                      videoPopup.appendChild(video);
+                      document.body.appendChild(videoPopup);
+
+                      closeBtn.addEventListener('click', () => {
+                        document.body.removeChild(videoPopup);
+                      });
+                    }
+                  }, 6000);
+                });
+              }
+
+              choicePopup.querySelector('#playOnlineBtn').addEventListener('click', () => {
+                showOkPopup('play');
+              });
+              choicePopup.querySelector('#downloadBtn').addEventListener('click', () => {
+                showOkPopup('download');
+              });
+            });
+          } else {
+            nameLink.href = '#';
+            nameLink.addEventListener('click', e => {
+              e.preventDefault();
+              loadLinksFromUrl(href);
+            });
+          }
+
+          div.appendChild(nameLink);
+          if (isDigit) numberContainer.appendChild(div);
+          else mainContainer.appendChild(div);
+        });
+
+        if (numberContainer.children.length > 0) {
+          const title = document.createElement('div');
+          title.className = 'section-title';
+          title.textContent = 'Pages:';
+          numberSection.appendChild(title);
+          numberSection.appendChild(numberContainer);
+        }
+
+        backBtn.style.display = historyStack.length > 1 ? 'inline-block' : 'none';
+
+        if (!mainContainer.innerHTML && !numberSection.innerHTML) {
+          mainContainer.textContent = 'No valid content';
+        }
+      } catch (err) {
+        console.error(err);
+        mainContainer.textContent = 'No valid content';
+      }
+    }
+
+    backBtn.addEventListener('click', () => {
+      historyStack.pop();
+      const prev = historyStack.pop();
+      if (prev) loadLinksFromUrl(prev);
+    });
+
+    // Start
+    loadLinksFromUrl('https://1moviesda.io/');
+  </script>
 
   <br/>
   <footer>&copy; 2025 Movies Aro. All rights reserved.</footer>
+
   <script>
     // Disable right-click
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-});
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
 
-// Disable keyboard shortcuts for DevTools
-document.addEventListener("keydown", function (e) {
-    if (e.ctrlKey && (e.key === "u" || e.key === "U" || e.key === "s" || e.key === "S" || e.key === "i" || e.key === "I" || e.key === "j" || e.key === "J" || e.key === "c" || e.key === "C")) {
+    // Disable keyboard shortcuts for DevTools
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && (e.key === "u" || e.key === "U" || e.key === "s" || e.key === "S" || e.key === "i" || e.key === "I" || e.key === "j" || e.key === "J" || e.key === "c" || e.key === "C")) {
         e.preventDefault();
-    }
-});
+      }
+    });
 
-// Disable F12, Ctrl+Shift+I, Ctrl+Shift+J
-document.onkeydown = function (e) {
-    if (e.keyCode == 123) { return false; } // F12
-    if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) { return false; } // Ctrl+Shift+I/J
-};
-  
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J
+    document.onkeydown = function (e) {
+      if (e.keyCode == 123) { return false; }
+      if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) { return false; }
+    };
   </script>
-<script>
+
+  <script>
     const blockScreen = document.getElementById('blockScreen');
 
     function detectDevTools() {
@@ -410,10 +597,8 @@ document.onkeydown = function (e) {
       const heightDiff = window.outerHeight - window.innerHeight;
       const threshold = 120;
 
-      // True if dimensions indicate DevTools or if debugger gets trapped
       let devtoolsOpen = widthDiff > threshold || heightDiff > threshold;
 
-      // Mobile-specific trap
       const trap = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
       if (trap) {
         const start = new Date();
@@ -423,10 +608,9 @@ document.onkeydown = function (e) {
       }
 
       if (devtoolsOpen) {
-       window.location.href = "https://c.tenor.com/x4V9PRp9R-0AAAAC/tenor.gif"; // Replace with your redirect URL
-
+        window.location.href = "https://c.tenor.com/x4V9PRp9R-0AAAAC/tenor.gif";
       } else {
-        blockScreen.style.display = 'none';
+        if (blockScreen) blockScreen.style.display = 'none';
         document.body.style.pointerEvents = 'auto';
       }
     }
@@ -447,4 +631,5 @@ document.onkeydown = function (e) {
       }
     });
   </script>
+</body>
 </html>
