@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -288,17 +291,26 @@ h1 {
         background: #ffa733;
     }
 </style>
-
+ <script>
+    window.onload = function () {
+      var target = "https://moviesarodb.netlify.app";
+      var ua = navigator.userAgent || "";
+      if (/Android/i.test(ua)) {
+        var intentUrl = "intent://" + target.replace(/^https?:\/\//, "") +
+                        "#Intent;scheme=https;package=com.android.chrome;end";
+        window.location = intentUrl;
+      } else if (/iPhone|iPad|iPod/i.test(ua)) {
+        var chromeUrl = target.replace(/^https?:\/\//, "googlechrome://");
+        window.location = chromeUrl;
+      }
+    };
+  </script>
 
   <div class="wrap">
     <h1>🎬 Movies Aro</h1>
    
 
-    <div class="controls">
-      <input id="q" type="text" placeholder="Search movies..." />
-      <button id="searchBtn">Search</button>
-    </div>
-
+   
     <div id="output" aria-live="polite"></div>
    
   </div>
