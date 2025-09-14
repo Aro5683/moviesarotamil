@@ -1,198 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Movies Page</title>
-<style>
-/* Base styling */
-body, .page-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 1rem;
-  background: #f9f9f9;
-  color: #333;
-  box-sizing: border-box;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="ppck-ver" content="84de141e5cf0eb5cad1ab632f0dddc2e" />
+  <title>Movies Aro - Tamil</title>
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
+ <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&amp;display=swap" rel="stylesheet" />
 
-/* Header */
-.header-bar {
+
+
+
+  
+  <style>
+    :root {
+      --bg: #0e1015;
+      --card: rgba(255, 255, 255, 0.05);
+      --accent: #4a90e2;
+      --accent2: #8e44ad;
+      --text: #f0f0f0;
+      --muted: #888;
+    }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+    .wrap {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+h1 {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(to right, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+ footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .controls {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      background: var(--card);
+      color: var(--text);
+      font-size: 15px;
+    }
+    input[type="text"]::placeholder {
+      color: var(--muted);
+    }
+    button {
+      padding: 10px 14px;
+      border-radius: 4px;
+      border: none;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    button:hover {
+      background: var(--accent2);
+      transform: translateY(-1px);
+    }
+    .hint {
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    .result {
+      display: flex;
+      flex-direction: column;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    .meta {
+      white-space: pre-wrap;
+      color: var(--text);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .links {
+      margin-top: 8px;
+      padding: 8px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 4px;
+      color: var(--text);
+    }
+    .links a {
+      display: block;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 6px 4px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .links a:hover {
+      background: rgba(74,144,226,0.15);
+    }
+    .error {
+      color: #ff6b6b;
+    }
+    .loading {
+      color: var(--muted);
+    }
+    code {
+      background: rgba(255,255,255,0.05);
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: monospace;
+      color: var(--text);
+    }
+.telegram-icon-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
-  background: #4a90e2;
-  color: #fff;
-  padding: 0 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.header-bar h1 {
-  margin: 0;
-  font-size: 26px;
-  text-align: center;
-  letter-spacing: 1px;
+  margin: 30px 0;
 }
 
-/* Main container for links */
-.links-section {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Individual link container */
-.link-box {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 12px 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.link-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* Link text */
-.link-text {
-  color: #4a90e2;
-  text-decoration: none;
-  font-size: 16px;
-}
-.link-text:hover {
-  color: #1c5db6;
-}
-
-/* Pagination container */
-.pagination-section {
-  margin-top: 20px;
-}
-.pagination-title {
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-/* Horizontal pagination links */
-.pagination-links {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding: 5px 0;
-  -webkit-overflow-scrolling: touch;
-}
-.pagination-links::-webkit-scrollbar {
-  height: 6px;
-}
-.pagination-links::-webkit-scrollbar-thumb {
-  background: #4a90e2;
-  border-radius: 3px;
-}
-.pagination-links::-webkit-scrollbar-track {
-  background: #e0e0e0;
-}
-
-/* Individual page link */
-.page-link {
-  display: inline-block;
-  padding: 6px 12px;
-  background: #e6f0fa;
-  color: #4a90e2;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background 0.2s, color 0.2s;
-}
-.page-link:hover, .page-link.active {
-  background: #4a90e2;
-  color: #fff;
-}
-
-/* Spinner */
-.loading-spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0;
-}
-.loading-spinner div {
-  border: 5px solid #e6f0fa;
-  border-top: 5px solid #4a90e2;
+.telegram-icon {
+  background: linear-gradient(to right, #4a90e2, #8e44ad);
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Back button */
-.back-button {
-  display: none;
-  padding: 8px 16px;
-  margin: 20px 0;
-  background: #4a90e2;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.2s;
-}
-.back-button:hover {
-  background: #1c5db6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(138, 43, 226, 0.5);
+  animation: pulse 2s infinite ease-in-out;
+  transition: transform 0.3s ease;
+  text-decoration: none;
 }
 
-/* Alert box */
-.custom-alert {
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ffffff;
-  padding: 20px 25px;
-  border-radius: 8px;
-  color: #333;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  z-index: 9999;
-  display: none;
+.telegram-icon:hover {
+  transform: scale(1.1);
 }
-.custom-alert button {
-  margin-top: 10px;
-  padding: 6px 12px;
-  background: #4a90e2;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #fff;
+
+.telegram-icon svg {
+  width: 28px;
+  height: 28px;
 }
-.custom-alert button:hover {
-  background: #1c5db6;
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 30px rgba(138, 43, 226, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 80px rgba(138, 43, 226, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+  }
 }
+
+  </style>
+<style>
+ 
+ 
+    .spinner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+    }
+
+    .spinner {
+        border: 4px solid rgba(255,255,255,0.2);
+        border-top: 4px solid #ff9800;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+        100% { transform: rotate(360deg); }
+    }
+
+    #links {
+     
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 800px;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .link-container {
+        background:linear-gradient(to right, var(--accent), var(--accent2));
+        padding: 14px 18px;
+        border-radius: 8px;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .link-container:hover {
+        background: #272727;
+        transform: translateY(-2px);
+    }
+
+    .link-name {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+
+    .link-name:hover {
+        text-decoration: underline;
+    }
+
+       /* === Pages Section Styles === */
+    #number-section {
+        margin-top: 20px;
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #ff9800;
+        margin-bottom: 10px;
+    }
+
+    .number-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+        background: #1b1b1b;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .number-links .link-container {
+        background: #292929;
+        padding: 8px 14px;
+        border-radius: 6px;
+        text-align: center;
+        min-width: 50px;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .number-links .link-container:hover {
+        background: #ff9800;
+        transform: scale(1.05);
+    }
+
+    .number-links .link-name {
+        color: #fff;
+        font-weight: bold;
+        font-size: 0.95em;
+    }
+    #backBtn {
+        background: #ff9800;
+        color: #121212;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    #backBtn:hover {
+        background: #ffa733;
+    }
 </style>
-</head>
-<body class="page-body">
 
-<div class="header-bar">
-  <h1>Movies Hub</h1>
+
+  <div class="wrap">
+    <h1>🎬 Movies Aro</h1>
+   
+
+    <div class="controls">
+      <input id="q" type="text" placeholder="Search movies..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="output" aria-live="polite"></div>
+   
+  </div>
+
+ 
+  <br/>
+<br/>
+<br/>
+<div class="telegram-icon-center">
+  <a href="https://telegram.me/+V8nUElyN93U1ZTBl" target="_blank" class="telegram-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewbox="0 0 24 24">
+      <path d="M9.743 16.39L9.5 20.5c.572 0 .822-.246 1.12-.54l2.688-2.56 5.576 4.082c1.022.566 1.748.268 2.02-.95L24 4.82c.374-1.53-.545-2.127-1.556-1.76L1.204 10.47C-.24 11.03-.22 11.834.9 12.17l5.74 1.793 13.336-8.418c.63-.407 1.205-.182.734.26"/>
+    </path></svg>
+  </a>
 </div>
-
-<div id="output" aria-live="polite"></div>
+<br/>
+<br/>
 
 <div>
-  <div id="links" class="links-section">
-    <div class="loading-spinner"><div></div></div>
+  <div id="links">
+    <div class="spinner-container">
+      <div class="spinner"></div>
+    </div>
   </div>
 
   <div id="number-section"></div>
-  <br/>
-  <button id="backBtn" class="back-button">Back</button>
+  <button id="backBtn" style="display:none; margin-bottom: 20px;">Back</button>
 </div>
 
 <script>
-// JavaScript from your original script (kept intact)
 const excludedTexts = [
   "Tamil Single Parts Movies","Tamil HD Mobile Movies","Tamil Dubbed Movies (Hollywood)",
   "Tamil A to Z Movies","Latest Tamil Web Series","Tamil Dubbed Movies",
@@ -206,11 +342,11 @@ const excludedTexts = [
 const mainContainer = document.getElementById('links');
 const numberSection = document.getElementById('number-section');
 const backBtn = document.getElementById('backBtn');
-const proxyUrl = 'https://api.codetabs.com/v1/proxy/?quest=';
+const proxyUrl = 'https://api.codetabs.com/v1/proxy/?quest='; // ✅ More stable than allorigins
 const historyStack = [];
 
 async function loadLinksFromUrl(url, isFinalPage = false) {
-  mainContainer.innerHTML = `<div class="loading-spinner"><div></div></div>`;
+  mainContainer.innerHTML = `<div class="spinner-container"><div class="spinner"></div></div>`;
   numberSection.innerHTML = '';
   if (!isFinalPage) historyStack.push(url);
 
@@ -224,6 +360,7 @@ async function loadLinksFromUrl(url, isFinalPage = false) {
 
     const links = doc.querySelectorAll('a');
 
+    // Find first valid <ul>
     let validUl = null;
     for (const ul of doc.querySelectorAll('ul')) {
       if (!ul.closest('.incoming-search-terms')) { validUl = ul; break; }
@@ -233,6 +370,7 @@ async function loadLinksFromUrl(url, isFinalPage = false) {
     const numberContainer = document.createElement('div');
     numberContainer.className = 'number-links';
 
+    // Render first valid <ul>
     if (validUl) {
       const div = document.createElement('div');
       div.className = 'link-container';
@@ -240,6 +378,7 @@ async function loadLinksFromUrl(url, isFinalPage = false) {
       mainContainer.appendChild(div);
     }
 
+    // Render links
     links.forEach(link => {
       let text = link.textContent.trim();
       let href = link.getAttribute('href');
@@ -259,12 +398,12 @@ async function loadLinksFromUrl(url, isFinalPage = false) {
 
       const isDigit = /^\d{1,2}$/.test(text);
       if (isDigit) text += ' Page';
+
       const div = document.createElement('div');
       div.className = 'link-container';
-
       const nameLink = document.createElement('a');
       nameLink.textContent = text;
-      nameLink.className = 'link-text';
+      nameLink.className = 'link-name';
 
       if (isFinalPage) {
         nameLink.href = href;
@@ -276,6 +415,7 @@ async function loadLinksFromUrl(url, isFinalPage = false) {
           loadLinksFromUrl(href);
         });
       }
+
       div.appendChild(nameLink);
       if (isDigit) numberContainer.appendChild(div);
       else mainContainer.appendChild(div);
@@ -299,13 +439,18 @@ async function loadLinksFromUrl(url, isFinalPage = false) {
   }
 }
 
+// Back button
 backBtn.addEventListener('click', () => {
   historyStack.pop();
   const prev = historyStack.pop();
   if (prev) loadLinksFromUrl(prev);
 });
 
+// Start
 loadLinksFromUrl('https://1moviesda.io/');
 </script>
-</body>
+
+
+  <br/>
+  <footer>&copy; 2025 Movies Aro. All rights reserved.</footer>
 </html>
